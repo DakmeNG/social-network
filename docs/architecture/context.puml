@@ -1,1 +1,9 @@
+@startuml Социальная сеть - Контекст
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
+Person(user, "Пользователь", "Регистрируется, создает посты, комментирует, ставит лайки")
+
+System(social_network, "Социальная сеть", "Позволяет пользователям обмениваться контентом")
+
+Rel(user, social_network, "Использует", "HTTPS")
+@enduml
